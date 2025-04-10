@@ -3,7 +3,7 @@ import React from "react";
 
 function Header() {
   return (
-    <header className="bg-rose-100 mt-1 flex items-center p-4">
+    <header className="bg-[#f7c9cd] mt-1 flex items-center p-4">
       <img
         src= "https://raw.githubusercontent.com/gracejudic/Hello_Ada_front/refs/heads/header/assets/hello%20ada.jpg"
         alt="Logo"
