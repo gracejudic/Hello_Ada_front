@@ -1,17 +1,23 @@
 import React from "react";
-// import logo from "C:/Users/charl/Documents/ADA/Projet_Collectif/Hello_Ada/Hello_Ada_Front/Hello_Ada_front/assets/hello ada.jpg";
 
 function Header() {
   return (
-    <header className="bg-[#f7c9cd] mt-1 flex items-center p-4">
-      <img
-        src= "https://raw.githubusercontent.com/gracejudic/Hello_Ada_front/refs/heads/header/assets/hello%20ada.jpg"
-        alt="Logo"
-        className="h-20 w-auto ml-4"
-      />
-      <button className="bg-rose-500 hover:bg-rose-600 text-white font-bold py-2 px-10 items-left p-4">
-        Connexion
-      </button>
+    <header className="bg-rose-100 mt-1 p-4 my-20">
+      <div className="max-w-1xl mx-auto flex flex-col md:flex-row items-center justify-between">
+        <img
+          src="file:///C:/Users/charl/Downloads/Hello,%20Ada%20!.svg"
+          alt="Logo"
+          className="h-20 w-auto mb-4 md:mb-0"
+        />
+        <div className="flex gap-x-4 ml-auto">
+          <button className="py-2 px-6 bg-rose-500 hover:bg-rose-600 text-white font-bold rounded">
+            Créer un post
+          </button>
+          <button className="py-2 px-6 bg-rose-500 hover:bg-rose-600 text-white font-bold rounded">
+          Connexion
+          </button>
+        </div>
+      </div>
     </header>
   );
 }
