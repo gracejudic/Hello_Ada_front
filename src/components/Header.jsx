@@ -4,11 +4,11 @@ import React from "react";
 function Header() {
   return (
     <header className="bg-[#f7c9cd] mt-1 flex items-center p-4">
-      <img
+      {/* <img
         src= "https://raw.githubusercontent.com/gracejudic/Hello_Ada_front/refs/heads/header/assets/hello%20ada.jpg"
         alt="Logo"
         className="h-20 w-auto ml-4"
-      />
+      /> */}
       <button className="bg-rose-500 hover:bg-rose-600 text-white font-bold py-2 px-10 items-left p-4">
         Connexion
       </button>
