@@ -4,19 +4,14 @@ import Header from './components/Header';
 import UserDetails from './components/UserDetails';
 import PostsDetails from './components/PostsDetails';
 import EditUser from './components/EditUser';
+import ProfilePage from './components/ProfilePage';
 
 function App() {
   return (
-    <Router>
       <div>
         <Header />
-        <Routes>
-          <Route path="/users/:id" element={<UserDetails />} />
-          <Route path="/users/:id/updateProfile" element={<EditUser />} />
-          <Route path="api/posts/user/:id" element={<PostsDetails/>} />
-        </Routes>
+        {<ProfilePage/>}
       </div>
-    </Router>
   );
 }
 
