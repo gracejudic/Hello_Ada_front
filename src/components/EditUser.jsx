@@ -68,7 +68,7 @@ const EditUser = () => {
             name="description"
             value={form.description}
             onChange={handleChange}
-            className="w-full border px-3 py-2 rounded"
+            className="w-full border px-3 py-6 rounded"
           />
         </div>
         <div>
@@ -78,7 +78,7 @@ const EditUser = () => {
             name="profilPicture"
             value={form.profilPicture}
             onChange={handleChange}
-            className="w-full border px-3 py-2 rounded"
+            className="w-full border px-3 py-1 rounded"
           />
         </div>
         <button type="submit" className="py-1 px-2 bg-rose-600 hover:bg-rose-600 text-white font-bold rounded">
