@@ -29,15 +29,15 @@ function HomePage() {
             {/* Conteneur principal en flex qui prend toute la hauteur restante */}
             <div className="flex justify-center w-full">
                 {/* Grille centrée avec largeur maximale */}
-                <div className="w-full max-w-2xl space-y-6">
+                <div className="w-full max-w-3xl space-y-5">
                         {posts.map((post) => (
                         <div key={post.id} className="bg-white rounded-2xl shadow-lg p-6 space-y-9 ">
                             {/* Image du post */}
                             <img
                                 src={post.postPicture}
                                 alt={post.postTitle}
-                                className="w-full h-55 object-fill rounded-lg"
-                            />
+                                className="w-full h-100 object-contain"
+                                />
 
                             {/* Titre du post */}
                             <h2 className="text-xl font-semibold text-rose-600">{post.postTitle}</h2>

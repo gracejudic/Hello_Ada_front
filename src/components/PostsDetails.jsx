@@ -9,14 +9,14 @@ const PostsDetails = () => {
     <main className=" min-h-screen p-6 flex flex-col">
       <h1 className="text-3xl font-bold text-center text-rose-700 mb-10">✨ Les derniers posts ✨</h1>
         <div className="flex justify-center w-full">
-          <div className="w-full max-w-2xl space-y-6 ">
+          <div className="w-full max-w-2xl space-y-5 ">
           {posts && posts.map((post) => (
             <div key={post.id} className="bg-white rounded-2xl shadow-lg p-6 flex flex-col space-y-4">
               {/* Image du post */}
               <img
                 src={post.postPicture}
                 alt={post.postTitle}
-                className="w-full h-52 object-cover rounded-lg"
+                className="w-full h-100 object-contain"
               />
               
               {/* Titre du post */}
@@ -26,9 +26,9 @@ const PostsDetails = () => {
               <p className="whitespace-pre-line text-gray-700">{post.content}</p>
               
               {/* Infos user */}
-              <div className="flex items-center space-x-4 mt-4">
+              {/* <div className="flex items-center space-x-4 mt-4">
                 <img
-                  src={post.user.profilPicture || "https://via.placeholder.com/40"}
+                  src={post.user.profilPicture}
                   alt={post.user.username}
                   className="w-12 h-12 rounded-full object-cover"
                 />
@@ -38,7 +38,7 @@ const PostsDetails = () => {
                     <p className="text-sm text-gray-500">{post.user.description}</p>
                   )}
                 </div>
-              </div>
+              </div> */}
 
               {/* Footer de carte */}
               <div className="flex justify-between text-sm text-gray-500 pt-2 border-t">
