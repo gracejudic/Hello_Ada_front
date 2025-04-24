@@ -10,9 +10,12 @@ const ProfilePage = () => {
         <Router>
             <div>
                 <Routes>
-                    <Route path="/users/:id" element={<UserDetails />} />
+                    <Route path="/users/:id" element={ 
+                        <div><div><UserDetails/></div>
+                    <div><PostsDetails/></div><div/>
+                    </div>
+                    }/>
                     <Route path="/users/:id/updateProfile" element={<EditUser />} />
-                    <Route path="api/posts/user/:id" element={<PostsDetails/>} />
                 </Routes>
             </div>
         </Router>
