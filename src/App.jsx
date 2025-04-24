@@ -1,8 +1,9 @@
-// import './App.css';
+import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import UserDetails from './components/UserDetails';
 import PostsDetails from './components/PostsDetails';
+import EditUser from './components/EditUser';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/users/:id" element={<UserDetails />} />
+          <Route path="/users/:id/updateProfile" element={<EditUser />} />
           <Route path="api/posts/user/:id" element={<PostsDetails/>} />
         </Routes>
       </div>
