@@ -1,7 +1,14 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 
 function HomePage() {
     const [posts, setPosts] = useState([]);
+    const navigate = useNavigate();
+    
+    const handleProfileClick = (userId) => {
+        navigate(`/users/${userId}`);
+    };
 
     useEffect(() => {
         fetch(`http://localhost:8080/api/posts`)
@@ -13,7 +20,7 @@ function HomePage() {
             .catch(error =>
                 console.error("Erreur lors du chargement du JSON:", error)
             );
-    }, [])
+    }, []);
 
     return (
         <main className="bg-rose-100 min-h-screen p-6 flex flex-col">
@@ -40,7 +47,8 @@ function HomePage() {
 
                             {/* Infos user */}
                             <div className="flex items-center space-x-4 mt-4">
-                                <img
+                                <img 
+                                    onClick={() => handleProfileClick(post.user.id)}
                                     src={post.user.profilPicture}
                                     alt={post.user.username}
                                     className="w-12 h-12 rounded-full object-cover"
@@ -49,7 +57,9 @@ function HomePage() {
                                     <p className="font-medium">@{post.user.username}</p>
                                     {post.user.description && (
                                         <p className="text-sm text-gray-500">{post.user.description}</p>
+                                        
                                     )}
+                                    <p>{post.user.id}</p>
                                 </div>
                             </div>
 
@@ -70,4 +80,4 @@ function HomePage() {
     );
 }
 
-export default HomePage
+export default HomePage;
