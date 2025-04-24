@@ -59,7 +59,6 @@ function HomePage() {
                                         <p className="text-sm text-gray-500">{post.user.description}</p>
                                         
                                     )}
-                                    <p>{post.user.id}</p>
                                 </div>
                             </div>
 
