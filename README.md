@@ -1,4 +1,10 @@
+
 # Hello Ada - Frontend
+
+# Lien du repo back : https://github.com/gracejudic/Hello_Ada_back
+
+# React + Vite
+
 
 Une application de blog tech développée avec React et Vite, utilisant Tailwind CSS pour le style.
 
